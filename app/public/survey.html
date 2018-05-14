@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder Survey</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Friend Finder</h1>
+            <br>
+            <h2>Answer these 10 questions to be matched with your new best friend!</h2>
+        </div>
+
+        <h2>Your Name</h2>
+        <input type="text" id="name" class="form-control" required>
+
+        <h4>Link to Photo</h4>
+        <input type="text" id="photo" class="form-control" required>
+
+        <h2>Question 1</h2>
+        <h3>Too much exposure to noise or light leaves me drained or spacey.</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h2>Question 2</h2>
+        <h3>I don't take risks unless I've done some careful research or evaluation.</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h2>Question 3</h2>
+        <h3>I don't mind being surrounded by large crowds of people.</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h2>Question 4</h2>
+        <h3>My friends would describe me as "quiet".</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h2>Question 5</h2>
+        <h3>I prefer being out and about instead of sitting at home.</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h2>Question 6</h2>
+        <h3>I am a cautious decision maker.</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h2>Question 7</h2>
+        <h3>In large social gatherings, I am often the center of attention.</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h2>Question 8</h2>
+        <h3>I do my best work in a quiet environment.</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h2>Question 9</h2>
+        <h3>I am good at making small talk.</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h2>Question 10</h2>
+        <h3>I act differently in different situations.</h3>
+        <select class="chosen-select" id="q1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+    </div>
+    <br>
+    <button id="submitBTN">Submit</button>
+    <br>
+
+
+</body>
+
+</html>
+
+<!-- Javascript -->
+<script type="text/javascript">
+    $("#submitBTN").on("click", function(event) {
+        event.preventDefault();
+        var q1 = $('#q1').val()
+        var q2 = $('#q2').val()
+        var q3 = $('#q3').val()
+        var q4 = $('#q4').val()
+        var q5 = $('#q5').val()
+        var q6 = $('#q6').val()
+        var q7 = $('#q7').val()
+        var q8 = $('#q8').val()
+        var q9 = $('#q9').val()
+        var q10 = $('#q10').val()
+
+        var friendsData = {
+            name: $("#.....").val().trim(),
+            photo: $("#...").val().trim(),
+            scores: [
+                q1,
+                q2,
+                q3,
+                q4,
+                q5,
+                q6,
+                q7,
+                q8,
+                q9,
+                q10
+            ]
+        };
+        console.log(friendsData);
+
+        $.post("/api/friends", friendsData, function(data, status) {
+            var img = document.createElement("img");
+            img.src = data.matchPhoto;
+            img.style.width = "200px";
+
+            alert({
+                title: "Here is your match!",
+                text: data.matchName,
+                content: img
+            });
+        });
+    });
+</script>

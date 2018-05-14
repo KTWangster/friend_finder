@@ -20,8 +20,8 @@ module.exports = function(app) {
         var userScore = userInput.userScore;
         var totalScore = 50;
         var diffScore = 0;
-        var matchName = '';
-        var matchPhoto = '';
+        var matchName = "";
+        var matchPhoto = "";
         // Checks differences in answers.
         for (var i = 0; i < friendsData.length; i++) {
             for (var j = 0; j < userScore.length; j++) {
@@ -35,6 +35,6 @@ module.exports = function(app) {
             };
         };
         friendsData.push(userInput);
+        res.json({ matchName: matchName, matchPhoto: matchPhoto });
     })
-    res.json({ matchName: matchName, matchPhoto: matchPhoto });
 };

@@ -2,7 +2,6 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path");
 
 // Express Configurationn
 // =============================================================
@@ -14,14 +13,13 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
-app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extend: true }));
 app.use(bodyParser.json());
 
 // Router
 // =============================================================
-require("./routes/apiRoutes.js")(app);
-require("./routes/htmlRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 // Listener
 // =============================================================
